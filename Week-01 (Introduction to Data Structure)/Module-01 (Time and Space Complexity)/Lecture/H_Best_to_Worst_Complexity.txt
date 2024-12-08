@@ -1,0 +1,16 @@
+Let, N = 1000
+
+Constant:       O(1)        --> 1
+Linear:         o(N)        --> 1000
+Logarithmic:    O(logN)     --> 10
+Square root:    O(sqrtN)    --> 32
+Quadratic:      O(N*N)      --> 1000000
+Linearithmic:   O(NlogN)    --> 10000
+
+
+Constant:       O(1)
+Logarithmic:    O(logN)
+Square root:    O(sqrtN)
+Linear:         O(N)
+Linearithmic:   O(NlogN)
+Quadratic:      O(N*N)
