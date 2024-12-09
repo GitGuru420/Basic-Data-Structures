@@ -19,6 +19,7 @@ int main() {
     for(int i=0; i<n; i++) {
         cout << ar[i] << " ";
     }
+    // so sc: O(N)
 
     return 0;
 }
