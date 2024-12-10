@@ -36,6 +36,22 @@ int main() {
     // for(int i=0; i<v.size(); i++) {
     //     cout << v[i] << " ";
     // }
+    
+
+    // replace()
+    // replace(v.begin(), v.end(), 4, 44);
+    // for(int i=0; i<v.size(); i++) {
+    //     cout << v[i] << " ";
+    // }
+
+    // find()
+    auto it = find(v.begin(), v.end(), 3);
+    if(it != v.end()) {
+        cout << "found the value " << *it << endl;
+    }
+    else {
+        cout << "not found" << endl;
+    }
 
     return 0;
 }
