@@ -1,0 +1,5 @@
+Time Complexity:
+
+1. What is time complexity?
+2. Overview of popular time complexity.
+3. Why we need to calculate time complexity before writing code.
