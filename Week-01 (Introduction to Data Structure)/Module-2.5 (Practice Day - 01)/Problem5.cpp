@@ -18,5 +18,7 @@ int main() {
         cout << sum << endl;
     }
 
+    // time complexity: O(qn)
+    
     return 0;
 }
