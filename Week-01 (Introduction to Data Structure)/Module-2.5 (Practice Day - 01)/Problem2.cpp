@@ -20,5 +20,7 @@ int main() {
         cout << x << " ";
     }
 
+    // time complexity: O(n)
+
     return 0;
 }
