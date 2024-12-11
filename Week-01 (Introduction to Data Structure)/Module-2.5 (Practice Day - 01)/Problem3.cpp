@@ -18,5 +18,7 @@ int main() {
     }
     cout << count << endl;
 
+    // time complexity: O(n)
+
     return 0;
 }
