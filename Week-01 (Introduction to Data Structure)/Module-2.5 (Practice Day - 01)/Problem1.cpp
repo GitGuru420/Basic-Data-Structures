@@ -13,5 +13,7 @@ int main() {
         cout << *it << " ";
     }
 
+    // time complexity: O(n)
+
     return 0;
 }
