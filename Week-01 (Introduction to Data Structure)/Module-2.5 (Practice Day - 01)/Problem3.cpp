@@ -10,15 +10,15 @@ int main() {
     }
 
     int count = 0;
-    for(int i=0; i<n; i++) {
-        auto it = find(v.begin(), v.end(), v[i]+1);
+    for(int i=0; i<n; i++) {    // O(n)
+        auto it = find(v.begin(), v.end(), v[i]+1);     // O(n)
         if(it != v.end()) {
             count++;
         }
     }
     cout << count << endl;
 
-    // time complexity: O(n)
+    // time complexity: O(n*n)
 
     return 0;
 }
