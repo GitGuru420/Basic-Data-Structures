@@ -1,6 +1,0 @@
-Time Complexity: 
---> Code er efficiency.
-
-1) Best Case
-2) Average Case
-3) Worst Case
