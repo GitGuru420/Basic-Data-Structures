@@ -26,38 +26,27 @@ void insert_at_tail(Node *&head, Node *&tail, int value)
     tail = tail->next;
 }
 
-int size(Node *head)
+int index(Node *head, int x)
 {
     Node *temp = head;
-    int sz = 0;
-    while (temp != NULL)
+    int idx = 0;
+    while(temp != NULL)
     {
-        sz++;
-        temp = temp->next;
-    }
-    return sz;
-}
-
-void index(Node *head, int x, int sz)
-{
-    Node *temp = head;
-    int idx = -1;
-    for (int i = 0; i < sz; i++)
-    {
-        if (temp->value == x)
+        if(temp->value == x)
         {
-            idx = i;
+            return idx;
         }
         temp = temp->next;
+        idx++;
     }
-    cout << idx << endl;
+    return -1;
 }
 
 int main()
 {
     int t;
     cin >> t;
-    for (int i = 1; i <= t; i++)
+    while(t--) 
     {
         Node *head = NULL;
         Node *tail = NULL;
@@ -73,8 +62,7 @@ int main()
         }
         int x;
         cin >> x;
-        int sz = size(head);
-        index(head, x, sz);
+        cout << index(head, x) << endl;
     }
 
     return 0;
