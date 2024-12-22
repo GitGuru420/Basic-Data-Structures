@@ -28,9 +28,15 @@ void print_forward(Node* head)
 }
 
 // inset at head
-void insert_at_head(Node* &head, int value)
+void insert_at_head(Node* &head, Node* &tail, int value)
 {
     Node* newNode = new Node(value);
+    if(head == NULL)
+    {
+        head = newNode;
+        tail = newNode;
+        return;
+    }
     newNode->next = head;
     head->previous = newNode;
     head = newNode;
@@ -41,18 +47,18 @@ int main()
     // node creation
     Node* head = new Node(10);
     Node* a = new Node(20);
-    Node* b = new Node(30);
+    Node* tail = new Node(30);
 
     // node connections
     head->next = a;
     a->previous = head;
 
-    a->next = b;
-    b->previous = a;
+    a->next = tail;
+    tail->previous = a;
 
     // insert function call
-    insert_at_head(head, 100);
-    insert_at_head(head, 200);
+    insert_at_head(head, tail, 100);
+    insert_at_head(head, tail, 200);
 
     // print function call
     print_forward(head);
