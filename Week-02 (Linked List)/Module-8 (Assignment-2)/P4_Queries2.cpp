@@ -52,10 +52,6 @@ void print_linked_list(Node* head)
 
 void delete_at_head(Node* &head)
 {
-    if(head == NULL)
-    {
-        return;
-    }
     Node* deleteNode = head;
     head = head->next;
     delete deleteNode;
@@ -64,26 +60,13 @@ void delete_at_head(Node* &head)
 void delete_at_any(Node* &head, int index)
 {
     Node* temp = head;
-    for(int i=1; i<index; i++) 
+    for(int i=0; i<index-1; i++) 
     {
         temp = temp->next;
     }
     Node* deleteNode = temp->next;
     temp->next = temp->next->next;
     delete deleteNode;
-}
-
-void delete_at_tail(Node* &head, Node* &tail, int index)
-{
-    Node* temp = head;
-    for(int i=1; i<index; i++) 
-    {
-        temp = temp->next;
-    }
-    Node* deleteNode = temp->next;
-    temp->next = temp->next->next;
-    delete deleteNode;
-    tail = temp;
 }
 
 int size(Node* head)
@@ -96,6 +79,19 @@ int size(Node* head)
         temp = temp->next;
     }
     return sz;
+}
+
+void delete_at_tail(Node* &head, Node* &tail, int index)
+{
+    Node* temp = head;
+    for(int i=0; i<index-1; i++) 
+    {
+        temp = temp->next;
+    }
+    Node* deleteNode = temp->next;
+    temp->next = temp->next->next;
+    delete deleteNode;
+    tail = temp;
 }
 
 
@@ -120,7 +116,7 @@ int main()
             insert_at_tail(head, tail, v);
             print_linked_list(head);
         }
-        else 
+        else if(size(head) != NULL)
         {
             if(v == 0)
             {
@@ -129,12 +125,12 @@ int main()
             }
             else 
             {
-                if(v > size(head)-1)
+                if(size(head) <= v)
                 {
                     print_linked_list(head);
                     continue;
                 }
-                else if(size(head) == v) 
+                else if(size(head)-1 == v)
                 {
                     delete_at_tail(head, tail, v);
                     print_linked_list(head);
@@ -145,6 +141,11 @@ int main()
                     print_linked_list(head);
                 }
             }
+        }
+        else 
+        {
+            print_linked_list(head);
+            continue;
         }
     }
 

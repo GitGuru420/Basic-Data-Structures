@@ -41,7 +41,7 @@ void print_linked_list(Node* head)
 void delete_at_any(Node* &head, int index)
 {
     Node* temp = head;
-    for(int i=1; i<index; i++) 
+    for(int i=0; i<index-1; i++) 
     {
         temp = temp->next;
     }
