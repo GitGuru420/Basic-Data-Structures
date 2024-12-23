@@ -9,7 +9,7 @@ class Node
         Node* next;
     Node(int value)
     {
-        this->previous = previous;
+        this->previous = NULL;
         this->value = value;
         this->next = NULL;
     }
