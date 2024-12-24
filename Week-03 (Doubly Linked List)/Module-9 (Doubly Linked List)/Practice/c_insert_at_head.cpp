@@ -15,8 +15,8 @@ class Node
     }
 };
 
-// print doubly linked list forward
-void print_forward(Node* &head)
+// print doubly linked list(forward)
+void print_forward(Node* head)
 {
     Node* temp = head;
     while(temp != NULL)
@@ -42,11 +42,11 @@ void insert_at_head(Node* &head, Node* &tail, int value)
 }
 
 int main()
-{
+{   
     // node creation
-    Node* head = new Node(10);
-    Node* a = new Node(20);
-    Node* tail = new Node(30);
+    Node* head = new Node(100);
+    Node* a = new Node(200);
+    Node* tail = new Node(300);
 
     // link creation
     head->next = a;
@@ -56,10 +56,10 @@ int main()
     tail->previous = a;
 
     // insert at head
-    insert_at_head(head, tail, 100);
+    insert_at_head(head, tail, 500);
 
-    // print function call
+    // print
     print_forward(head);
-    
+
     return 0;
 }
