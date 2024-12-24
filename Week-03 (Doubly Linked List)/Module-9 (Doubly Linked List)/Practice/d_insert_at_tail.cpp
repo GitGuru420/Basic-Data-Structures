@@ -56,7 +56,7 @@ int main()
     a->next = tail;
     tail->previous = a;
 
-    // insert at head
+    // insert at tail
     insert_at_tail(head, tail, 400);
     insert_at_tail(head, tail, 500);
 
