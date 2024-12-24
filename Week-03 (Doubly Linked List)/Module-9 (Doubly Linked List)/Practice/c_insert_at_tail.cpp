@@ -27,6 +27,7 @@ void print_forward(Node* head)
     cout << endl;
 }
 
+// insert at tail
 void insert_at_tail(Node* &head, Node* &tail, int value)
 {
     Node* newNode = new Node(value);
