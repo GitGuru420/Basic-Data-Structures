@@ -16,18 +16,22 @@ class Node
 };
 
 int main()
-{
+{   
     // node creation
-    Node* head = new Node(10);
-    Node* a = new Node(20);
-    Node* tail = new Node(30);
+    Node* head = new Node(100);
+    Node* a = new Node(200);
+    Node* b = new Node(300);
+    Node* tail = new Node(400);
 
     // link creation
     head->next = a;
     a->previous = head;
 
-    a->next = tail;
-    tail->previous = a;
-    
+    a->next = b;
+    b->previous = a;
+
+    b->next = tail;
+    tail->previous = b;
+
     return 0;
 }
