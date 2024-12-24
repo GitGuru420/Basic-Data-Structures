@@ -15,8 +15,8 @@ class Node
     }
 };
 
-// print doubly linked list forward
-void print_forward(Node* &head)
+// print doubly linked list(forward)
+void print_forward(Node* head)
 {
     Node* temp = head;
     while(temp != NULL)
@@ -27,8 +27,8 @@ void print_forward(Node* &head)
     cout << endl;
 }
 
-// print doubly linked list backward
-void print_backward(Node* &tail)
+// print doubly linked list(backward)
+void print_backward(Node* tail)
 {
     Node* temp = tail;
     while(temp != NULL)
@@ -40,22 +40,26 @@ void print_backward(Node* &tail)
 }
 
 int main()
-{
+{   
     // node creation
-    Node* head = new Node(10);
-    Node* a = new Node(20);
-    Node* tail = new Node(30);
+    Node* head = new Node(100);
+    Node* a = new Node(200);
+    Node* b = new Node(300);
+    Node* tail = new Node(400);
 
     // link creation
     head->next = a;
     a->previous = head;
 
-    a->next = tail;
-    tail->previous = a;
+    a->next = b;
+    b->previous = a;
 
-    // print function call
+    b->next = tail;
+    tail->previous = b;
+
+    // print
     print_forward(head);
     print_backward(tail);
-    
+
     return 0;
 }
