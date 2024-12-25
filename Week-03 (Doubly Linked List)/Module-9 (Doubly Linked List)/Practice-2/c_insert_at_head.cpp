@@ -28,7 +28,7 @@ void print_forward(Node* head)
 }
 
 // insert at head
-void insert_at_head(Node* &head, Node* tail, int value)
+void insert_at_head(Node* &head, Node* &tail, int value)
 {
     Node* newNode = new Node(value);
     if(head == NULL)
@@ -56,10 +56,13 @@ int main()
     a->next = tail;
     tail->previous = a;
 
+    // Node* head = NULL;
+    // Node* tail = NULL;
+
     // insert at head
     insert_at_head(head, tail, 40);
     insert_at_head(head, tail, 50);
-    
+
     // print doubly linked list
     print_forward(head);
 
