@@ -27,6 +27,18 @@ void print_forward(Node* head)
     cout << endl;
 }
 
+// print doubly linked list backward
+void print_backward(Node* tail)
+{
+    Node* temp = tail;
+    while(temp != NULL)
+    {
+        cout << temp->value << " ";
+        temp = temp->previous;
+    }
+    cout << endl;
+}
+
 int main()
 {
     // node creation
@@ -43,6 +55,7 @@ int main()
 
     // print doubly linked list
     print_forward(head);
+    print_backward(tail);
 
     return 0;
 }
