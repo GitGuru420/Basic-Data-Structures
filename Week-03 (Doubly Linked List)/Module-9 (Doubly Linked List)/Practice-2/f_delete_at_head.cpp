@@ -31,13 +31,13 @@ void print_forward(Node* head)
 void delete_at_head(Node* &head, Node* &tail)
 {
     Node* deleteNode = head;
+    head = head->next;
+    delete deleteNode;
     if(head == NULL)
     {
         tail = NULL;
         return;
     }
-    head = head->next;
-    delete deleteNode;
     head->previous = NULL;
 }
 
@@ -54,11 +54,10 @@ int main()
     
     a->next = tail;
     tail->previous = a;
-    
-    // Node* head = NULL;
-    // Node* tail = NULL;
 
     // delete at head
+    delete_at_head(head, tail);
+    delete_at_head(head, tail);
     delete_at_head(head, tail);
 
     // print doubly linked list
