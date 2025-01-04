@@ -2,31 +2,27 @@
 using namespace std;
 
 int main()
-{   
-    list<int> lst = {1, 2, 3, 4, 5};
-    // lst.clear();
-    // for(int val : lst)
-    // {
-    //     cout << val << " ";
-    // }
-    // cout << endl;
-    // cout << lst.size() << endl;
+{
+    vector<int> v = {100, 200, 300};
+    list<int> l2(v.begin(), v.end());
 
-    // if(lst.empty())
-    // {
-    //     cout << "Empty" << endl;
-    // }
-    // else
-    // {
-    //     cout << "Not Empty" << endl;
-    // }
-
-    // lst.resize(2);
-    // lst.resize(5);
-    lst.resize(5, 100);
-    for(int val : lst)
+    // l2.clear();
+    cout << "List size: " << l2.size() << endl;
+    if(l2.empty())
     {
-        cout << val << " ";
+        cout << "Empty" << endl;
+    }
+    else 
+    {
+        cout << "Not Empty" << endl;
+    }
+
+    // l2.resize(2);
+    // l2.resize(5);
+    l2.resize(5, 99);
+    for(int val : l2)
+    {
+        cout << val << endl;
     }
     return 0;
 }
