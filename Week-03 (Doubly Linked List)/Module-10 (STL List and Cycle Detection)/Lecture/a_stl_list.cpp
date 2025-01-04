@@ -4,56 +4,35 @@ using namespace std;
 int main()
 {
     // list<int> l;
-    // cout << l.size() << endl;
+    // cout << "List Size: " << l.size() << endl;
 
     // list<int> l(10);
-    // cout << l.size() << endl;
+    // cout << "List Size: " << l.size() << endl;
 
-    list<int> l(10, 3);
-    cout << l.size() << endl;
-
-    // print list
+    // list<int> l(10, 3);
     // cout << *l.begin() << endl;
+    // for(auto it = l.begin(); it != l.end(); it++)
+    // {
+    //     cout << *it << endl;
+    // }
 
-    // iterator based for loop
-    for(auto it = l.begin(); it != l.end(); it++)
-    {
-        cout << *it << " ";
-    }
+    // list<int> l(3, 10);
+    // for(int val : l)
+    // {
+    //     cout << val << endl;
+    // }
 
-    cout << endl;
-
-    // ranged based for loop
-    for(int val:l)
-    {
-        cout << val << " ";
-    }
-
-    cout << endl;
-
-    list<int> l1 = {1,2,3,4,5};
-    list<int> l2(l1);
-    for(int value:l2)
-    {
-        cout << value << " ";
-    }
-    
-    cout << endl;
-
-    int a[] = {10, 20, 30};
-    list<int> l3(a, a+3);
-    for(int val1: l3)
-    {
-        cout << val1 << " ";
-    }
-
-    cout << endl;
-
+    list<int> l = {1, 2, 3, 4, 5};
+    // int a[] = {10, 20, 30};
     vector<int> v = {100, 200, 300};
-    list<int> l4(v.begin(), v.end());
-    for(int i:l4)
+    // list<int> l2(l);
+
+    // list<int> l2(a, a+3);
+    list<int> l2(v.begin(), v.end());
+
+    for(int val : l2)
     {
-        cout << i << " ";
+        cout << val << endl;
     }
 
     return 0;
