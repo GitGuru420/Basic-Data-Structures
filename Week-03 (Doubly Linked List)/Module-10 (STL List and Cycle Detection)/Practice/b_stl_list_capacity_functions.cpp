@@ -2,30 +2,30 @@
 using namespace std;
 
 int main()
-{   
-    list<int> lst = {1, 2, 3, 4, 5};
-    cout << lst.size() << endl;
-    cout << lst.max_size() << endl;
+{
+    list<int> l = {10, 20, 30, 40};
+    // cout << "List size: " << l.size() << endl;
+    // cout << "List max size: " << l.max_size() << endl;
 
-    // lst.clear();
-    // cout << lst.size() << endl;
-    if(lst.empty())
-    {
-        cout << "Yes, list is Empty" << endl;
-    }
-    else 
-    {
-        cout << "No, list is Not Empty" << endl;
-    }
+    // l.clear();
+    // cout << "List size: " << l.size() << endl;
 
-    // lst.resize(2);
-    // lst.resize(5);
-    // lst.resize(7);
-    lst.resize(7, 100);
-    for(int val : lst)
+    // l.clear();
+    // if(l.empty())
+    // {
+    //     cout << "Empty" << endl;
+    // }
+    // else 
+    // {
+    //     cout << "Not Empty" << endl;
+    // }
+
+    // l.resize(2);
+    // l.resize(6);
+    l.resize(6, 99);
+    for(int val : l)
     {
         cout << val << " ";
     }
-
     return 0;
 }
