@@ -69,16 +69,36 @@ void insert_at_head(Node* &head, Node* &tail, int value)
     head = newNode;
 }
 
-void insert_at_any_position(Node* &head, int index, int value)
+// Updated: Corrected the insert_at_any_position function
+void insert_at_any_position(Node *&head, Node *&tail, int index, int value)
 {
-    Node* newNode = new Node(value); 
-    Node* temp = head;
-    for(int i=1; i<index; i++)
-    {
-        temp = temp->next;
-    }
-    newNode->next = temp->next;
-    temp->next = newNode;
+     Node *newNode = new Node(value);
+     if (index == 0)
+     { // If the index is 0, insert at head
+          insert_at_head(head, tail, value);
+          return;
+     }
+
+     Node *temp = head;
+     for (int i = 0; i < index - 1; i++)
+     { 
+          if (temp == NULL)
+               return; 
+          temp = temp->next;
+     }
+
+     newNode->next = temp->next;
+     newNode->previous = temp;
+
+     if (temp->next != NULL)
+     { // Update next node's previous pointer
+          temp->next->previous = newNode;
+     }
+     else
+     {
+          tail = newNode; // Update tail if inserted at the end
+     }
+     temp->next = newNode;
 }
 
 // size
@@ -115,7 +135,7 @@ int main()
             print_forward(head);
             print_backward(tail);
         }
-        else if(x == 1 && size(head) == 1)
+        else if (x == size(head))
         {
             insert_at_tail(head, tail, v);
             print_forward(head);
@@ -123,7 +143,7 @@ int main()
         }
         else
         {
-            insert_at_any_position(head, x, v);
+            insert_at_any_position(head, tail, x, v);
             print_forward(head);
             print_backward(tail);
         }
