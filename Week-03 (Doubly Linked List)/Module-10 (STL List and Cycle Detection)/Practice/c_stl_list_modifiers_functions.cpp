@@ -21,8 +21,24 @@ int main()
     l.pop_back();
     l.pop_front();
 
-    list<int> l2 = {99, 999, 9999};
+    // list<int> l2 = {99, 999, 9999};
+    list<int> l2 = {99, 999, 99};
     l.insert(next(l.begin(), 2), l2.begin(), l2.end());
+    
+    // l.erase(next(l.begin(), 2));
+    // l.erase(next(l.begin(), 2), next(l.begin(), 5));
+
+    replace(l.begin(), l.end(), 99, 1111);
+    // auto it = find(l.begin(), l.end(), 99);
+    auto it = find(l.begin(), l.end(), 100);
+    if(it == l.end())
+    {
+        cout << "Not Found" << endl;
+    }
+    else 
+    {
+        cout << "Found" << endl;
+    }
     for(int val : l)
     {
         cout << val << " ";
