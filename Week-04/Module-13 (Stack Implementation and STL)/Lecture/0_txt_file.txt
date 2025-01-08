@@ -1,0 +1,20 @@
+Q. What is Stack?
+Ans. Stack is a Data Structure that follows LIFO(Last In First Out) techniques, 
+which means data is inserted at the top and also removed from the top.
+
+Stack
+- Abstract Data Structure
+- Higher Level Data Structure
+
+# Array & Linked List are Lower Level Data Structure.
+
+Complexity
+- Delete at tail -> Singly Linked List: O(N)
+- Delete at tail -> Array, Doubly: O(1)
+
+Stack Operation
+- push()
+- pop()
+- top()
+- size()
+- empty()
