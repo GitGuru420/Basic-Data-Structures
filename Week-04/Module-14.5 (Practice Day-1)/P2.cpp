@@ -36,6 +36,7 @@ int main()
             if(st.top() != q.front())
             {
                 flag = false;
+                break;
             }
             st.pop();
             q.pop();
