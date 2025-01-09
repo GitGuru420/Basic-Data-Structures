@@ -3,27 +3,33 @@ using namespace std;
 
 int main()
 {
-    queue<int> q;
+    queue<int> q1, q2;
     int n;
     cin >> n;
     while(n--)
     {
         int val;
         cin >> val;
-        q.push(val);
+        q1.push(val);
     }
 
     stack<int> st;
-    while(!q.empty())
+    while(!q1.empty())
     {
-        st.push(q.front());
-        q.pop();
+        st.push(q1.front());
+        q1.pop();
     }
 
     while(!st.empty())
     {
-        cout << st.top() << " ";
+        q2.push(st.top());
         st.pop();
+    }
+
+    while(!q2.empty())
+    {
+        cout << q2.front() << " ";
+        q2.pop();
     }
 
     return 0;
