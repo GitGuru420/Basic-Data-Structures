@@ -4,36 +4,43 @@ using namespace std;
 int main()
 {
     stack<int> st;
-    queue<int> q, q2;
+    queue<int> q;
 
     int n, m;
     cin >> n >> m;
     while (n--)
     {
-        int val1;
-        cin >> val1;
-        st.push(val1);
+        int val;
+        cin >> val;
+        st.push(val);
     }
 
     while (m--)
     {
-        int val2;
-        cin >> val2;
-        q.push(val2);
+        int val;
+        cin >> val;
+        q.push(val);
     }
 
-    if (n != m)
+    if (st.size() != q.size())
     {
         cout << "NO" << endl;
     }
     else
     {
-        while (!st.empty())
+        bool flag = true;
+        while(!st.empty())
         {
-            q2.push(st.top());
+            if(st.top() != q.front())
+            {
+                flag = false;
+                break;
+            }
             st.pop();
+            q.pop();
         }
-        if (q == q2)
+
+        if(flag)
         {
             cout << "YES" << endl;
         }
