@@ -41,6 +41,7 @@ int main()
     b->left = d;
     b->right = e;
 
+    // inorder
     inorder(root);
 
     return 0;
