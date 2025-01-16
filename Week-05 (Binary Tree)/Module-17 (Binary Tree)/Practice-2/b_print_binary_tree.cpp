@@ -53,6 +53,7 @@ main()
     e->right = h;
 
     // pre order traversal
+    cout << "Pre order traversal (root->left->right):" << endl;
     pre_order(root);
 
     return 0;
