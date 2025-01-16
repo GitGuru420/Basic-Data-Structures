@@ -35,6 +35,16 @@ void in_order(Node *root)
     in_order(root->right);
 }
 
+// post order traversal : left->right->root
+void post_order(Node *root)
+{
+    if(root == NULL)
+        return;
+    post_order(root->left);
+    post_order(root->right);
+    cout << root->val << " ";
+}
+
 int
 main()
 {
@@ -70,6 +80,11 @@ main()
     // in order traversal
     cout << "In order traversal (left->root->right):" << endl;
     in_order(root);
+    cout << endl;
+
+    // post order traversal
+    cout << "Post order traversal (left->right->root):" << endl;
+    post_order(root);
     cout << endl;
 
     return 0;
