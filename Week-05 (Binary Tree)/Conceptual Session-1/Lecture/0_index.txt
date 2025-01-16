@@ -1,0 +1,10 @@
+# Data Structure
+1) Linear
+    - Array
+    - Vector
+    - Linked List
+    - Stack
+    - Queue
+2) Non-linear
+    - Tree
+    - Graph
