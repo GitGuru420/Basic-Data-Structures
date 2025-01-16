@@ -25,6 +25,16 @@ void pre_order(Node *root)
     pre_order(root->right);
 }
 
+// in order traversal : left->root->right
+void in_order(Node *root)
+{
+    if(root == NULL)
+        return;
+    in_order(root->left);
+    cout << root->val << " ";
+    in_order(root->right);
+}
+
 int
 main()
 {
@@ -55,6 +65,12 @@ main()
     // pre order traversal
     cout << "Pre order traversal (root->left->right):" << endl;
     pre_order(root);
+    cout << endl;
+
+    // in order traversal
+    cout << "In order traversal (left->root->right):" << endl;
+    in_order(root);
+    cout << endl;
 
     return 0;
 }
