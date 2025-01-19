@@ -1,0 +1,5 @@
+# Binary Search Tree (BST)
+
+Conditions of BST:
+    - All values of left sub-tree < node->value
+    - All values of right sub-tree > node->value
