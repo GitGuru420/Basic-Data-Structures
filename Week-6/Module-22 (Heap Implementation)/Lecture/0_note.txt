@@ -1,0 +1,10 @@
+# Array representation of complete binary tree -
+parent_index * 2 + 1 = left_index
+parent_index * 2 + 2 = right_index
+
+(child_index - 1) / 2 = parent_index 
+
+# Heap
+    - Max Heap
+    - Min Heap
+ 
