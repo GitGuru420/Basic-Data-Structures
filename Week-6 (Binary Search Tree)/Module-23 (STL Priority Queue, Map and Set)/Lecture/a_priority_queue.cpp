@@ -25,9 +25,9 @@ int main()
     cout << pq.top() << endl;
     pq.push(2);
     cout << pq.top() << endl;
-    pq.pop(); // 2
-    pq.pop(); // 5
+    pq.pop();   // 2
+    pq.pop();   // 5
     cout << pq.top() << endl;
-
+    
     return 0;
 }
