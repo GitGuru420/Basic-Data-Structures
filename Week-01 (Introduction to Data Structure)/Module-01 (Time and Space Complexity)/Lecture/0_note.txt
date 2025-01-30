@@ -10,3 +10,8 @@
         if search value get first -> Omega Notation
         if search value get middle -> Theta Notation
         if search value get last -> Big O Notation (We always choose it)
+
+    
+    Rules to calculate time complexity:
+        1. Always take the worst case
+        2. Ignore the constant
