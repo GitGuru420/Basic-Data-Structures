@@ -1,0 +1,12 @@
+# Time Complexity
+
+    Asymptotic Notations:
+        - Omega Notation (Ω) -> Best case
+        - Theta Notation (θ) -> Average case
+        - Big O Notation (O) -> Worst case
+
+        Example: arr[5] = {1, 2, 3, 4, 5}
+                 index ->  0, 1, 2, 3, 4
+        if search value get first -> Omega Notation
+        if search value get middle -> Theta Notation
+        if search value get last -> Big O Notation (We always choose it)
